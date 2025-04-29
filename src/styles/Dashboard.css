@@ -1,0 +1,67 @@
+.dashboard-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+                url('./backimage.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    overflow: hidden;
+  }
+  
+  .dashboard-wrapper {
+    width: 100%;
+    max-width: 850px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(63, 199, 242, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .dashboard-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    color: #00bfff;
+  }
+  
+  .dashboard-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-tab {
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    border: 2px solid #00bfff;
+    background: transparent;
+    color: #00bfff;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-tab:hover {
+    background-color: rgba(0, 191, 255, 0.1);
+  }
+  
+  .dashboard-tab.active {
+    background-color: #00bfff;
+    color: white;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.4);
+  }
+  
+  .dashboard-content {
+    margin-top: 2rem;
+  }
+  

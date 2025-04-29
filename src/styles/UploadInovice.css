@@ -1,0 +1,115 @@
+
+/* 🎯 התאמת רכיב העלאת חשבונית */
+.upload-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .upload-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #00bfff;
+  }
+  
+  .upload-button {
+    background-color: #00bfff;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .upload-button:hover {
+    background-color: #2ad4ff;
+  }
+  
+  .upload-error {
+    color: #ff6b6b;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .upload-success {
+    color: #2abf5a;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .upload-preview {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    text-align: left;
+    direction: ltr;
+    color: #fff;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+  
+  .preview-title {
+    color: #00bfff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .custom-file-upload {
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    color: white;
+    background-color: rgba(0, 191, 255, 0.2);
+    border: 2px dashed #00bfff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: rgba(0, 191, 255, 0.35);
+  }
+  
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .dashboard-title {
+      font-size: 24px;
+    }
+    .dashboard-tab {
+      width: 100%;
+      text-align: center;
+    }
+    .dashboard-wrapper {
+      padding: 2rem 1rem;
+    }
+    .upload-card {
+      padding: 1.5rem 1rem;
+    }
+    .upload-button {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  

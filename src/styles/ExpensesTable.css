@@ -1,0 +1,87 @@
+/* ✅ טבלת הוצאות */
+.expenses-table {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+    overflow-x: auto;
+  }
+  
+  .expenses-table table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .expenses-table th,
+  .expenses-table td {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .expenses-table thead {
+    background-color: rgba(0, 191, 255, 0.15);
+    color: #00bfff;
+  }
+  
+  .expenses-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .expenses-table tr:hover {
+    background-color: rgba(0, 191, 255, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .expenses-table input,
+  .expenses-table select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+  }
+  
+  .expenses-table input::placeholder {
+    color: #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .expenses-table th, .expenses-table td {
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+/* ✅ סינון טבלת הוצאות */
+.expenses-table input,
+.expenses-table select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: right;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%2300bfff' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 0.75rem center;
+  background-size: 12px 12px;
+  padding-left: 2rem;
+  box-sizing: border-box;
+}
+
+.expenses-table select option {
+  background-color: #111;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.expenses-table input::placeholder {
+  color: #ccc;
+}
