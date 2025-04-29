@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import '../styles/ExpensesTable.css'
+import { API_BASE_URL } from '../utils/fetchWithAuth';
 
+
+// Type definition for expense items
 export type Expense = {
   id: number;
   businessName: string;
@@ -15,6 +18,7 @@ export type Expense = {
 };
 
 export default function ExpensesTable() {
+  // State variables for data and filters
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -26,6 +30,7 @@ export default function ExpensesTable() {
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editedExpense, setEditedExpense] = useState<Partial<Expense>>({});
 
+  // Fetch expenses from API with optional filters
   const fetchExpenses = useCallback(() => {
     const params: any = {};
     if (searchTerm) params.name = searchTerm;
@@ -36,7 +41,7 @@ export default function ExpensesTable() {
     if (dateTo) params.to = dateTo;
 
     setLoading(true);
-    axios.get('https://localhost:7129/api/expenses', {
+    axios.get(`${API_BASE_URL}/api/expenses`, {
       params,
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -52,26 +57,30 @@ export default function ExpensesTable() {
     });
   }, [searchTerm, selectedCategory, minTotal, maxTotal, dateFrom, dateTo]);
 
+  // Delete an expense by ID
   const deleteExpense = (id: number) => {
     if (!window.confirm('האם למחוק את ההוצאה?')) return;
-    axios.delete(`https://localhost:7129/api/expenses/${id}`)
+    axios.delete(`${API_BASE_URL}/api/expenses/${id}`)
       .then(() => fetchExpenses())
       .catch(err => console.error('❌ שגיאת מחיקה:', err));
   };
 
+  // Start editing a specific row
   const startEdit = (exp: Expense) => {
     setEditingId(exp.id);
     setEditedExpense({ ...exp });
   };
 
+  // Cancel the edit operation
   const cancelEdit = () => {
     setEditingId(null);
     setEditedExpense({});
   };
 
+  // Save the edited expense via PUT request
   const saveEdit = () => {
     if (!editingId) return;
-    axios.put(`https://localhost:7129/api/expenses/${editingId}`, editedExpense)
+    axios.put(`${API_BASE_URL}/api/expenses/${editingId}`, editedExpense)
       .then(() => {
         fetchExpenses();
         cancelEdit();
@@ -79,10 +88,12 @@ export default function ExpensesTable() {
       .catch(err => console.error('❌ שגיאת עדכון:', err));
   };
 
+  // Initial data load on mount
   useEffect(() => {
     fetchExpenses();
   }, [fetchExpenses]);
 
+  // Re-fetch on filter changes, with 500ms debounce
   useEffect(() => {
     const debounce = setTimeout(() => {
       fetchExpenses();
@@ -94,6 +105,7 @@ export default function ExpensesTable() {
     <div className="expenses-table">
       <h2 className="text-2xl font-bold mb-4 text-center text-[#00bfff]">רשימת הוצאות</h2>
 
+      {/* Filter form */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <input type="text" placeholder="חיפוש לפי שם עסק..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
@@ -111,6 +123,7 @@ export default function ExpensesTable() {
         <input type="date" onChange={(e) => setDateTo(e.target.value)} />
       </div>
 
+      {/* Table or loading message */}
       {loading ? (
         <p className="text-center text-white">⏳ טוען נתונים...</p>
       ) : (
