@@ -1,6 +1,6 @@
 const API_BASE_URL = window.location.hostname.includes('localhost')
   ? 'https://localhost:7129'
-  : 'https://busymatch-backend.onrender.com';
+  : 'https://busymatch-backend.azurewebsites.net';
 
 export { API_BASE_URL };
 
