@@ -1,28 +1,36 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Login.css';
+import { API_BASE_URL } from '../utils/fetchWithAuth';
+
 
 export default function Register() {
+  // Local state for form fields and error message
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  // Handles registration logic
   const handleRegister = async () => {
     setError('');
+    
+    // Check if passwords match
     if (password !== confirm) {
       setError('הסיסמאות לא תואמות');
       return;
     }
 
     try {
-      const res = await fetch('http://localhost:5095/api/Auth/register', {
+      // Send POST request to backend to register a new user
+      const res = await fetch(`${API_BASE_URL}api/Auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
 
+      // If successful, redirect to login page
       if (res.ok) {
         navigate('/login');
       } else {
@@ -40,6 +48,7 @@ export default function Register() {
         <h2 className="login-title">הרשמה</h2>
         {error && <div className="login-error">{error}</div>}
 
+        {/* Email input */}
         <div className="login-input-wrapper">
           <i className="fas fa-envelope"></i>
           <input
@@ -50,6 +59,7 @@ export default function Register() {
           />
         </div>
 
+        {/* Password input */}
         <div className="login-input-wrapper">
           <i className="fas fa-lock"></i>
           <input
@@ -61,6 +71,7 @@ export default function Register() {
           />
         </div>
 
+        {/* Password confirmation input */}
         <div className="login-input-wrapper">
           <i className="fas fa-lock"></i>
           <input
@@ -72,10 +83,12 @@ export default function Register() {
           />
         </div>
 
+        {/* Register button */}
         <button onClick={handleRegister} className="login-button">
           הירשם
         </button>
 
+        {/* Link to login page */}
         <p className="login-footer">
           כבר יש לך משתמש?{' '}
           <Link className="login-link" to="/login">

@@ -6,21 +6,27 @@ import {
 import { fetchWithAuth } from '../utils/fetchWithAuth';
 import html2canvas from 'html2canvas';
 import '../styles/DashboardCharts.css';
+import { API_BASE_URL } from '../utils/fetchWithAuth';
 
+
+// Expected shape of API summary response
 type SummaryResponse = {
   byCategory: { category: string; total: number }[];
   byMonth: { month: number; total: number }[];
 };
 
 export default function DashboardCharts() {
+  // Local state: data from backend and loading status
   const [summary, setSummary] = useState<SummaryResponse | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // Refs used for downloading chart images
   const pieRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
 
+  // Fetch chart data on component mount
   useEffect(() => {
-    fetchWithAuth('https://localhost:7129/api/Reports/summary')
+    fetchWithAuth(`${API_BASE_URL}/api/Reports/summary`)
       .then((res) => res.json())
       .then((data) => {
         setSummary(data);
@@ -32,8 +38,10 @@ export default function DashboardCharts() {
       });
   }, []);
 
+  // Predefined color palette for chart segments
   const colors = ['#00bfff', '#82ca9d', '#ffc658', '#ff7f50', '#a4de6c', '#d0ed57'];
 
+  // Download chart as PNG using html2canvas
   const downloadChart = async (
     ref: React.RefObject<HTMLDivElement | null>,
     name: string
@@ -46,11 +54,13 @@ export default function DashboardCharts() {
     link.click();
   };
 
+  // Show loading or error messages
   if (loading) return <div className="text-center mt-8">🔄 טוען גרפים...</div>;
   if (!summary) return <div className="text-center mt-8 text-red-500">⚠ שגיאה בטעינת נתונים</div>;
 
   return (
     <div className="charts-wrapper">
+      {/* Pie chart: expenses by category */}
       <div className="chart-card" ref={pieRef}>
         <h2 className="chart-title">הוצאות לפי קטגוריה</h2>
         <ResponsiveContainer width={400} height={300}>
@@ -77,6 +87,7 @@ export default function DashboardCharts() {
         </button>
       </div>
 
+      {/* Line chart: expenses by month */}
       <div className="chart-card" ref={lineRef}>
         <h2 className="chart-title">הוצאות לפי חודש</h2>
         <ResponsiveContainer width={500} height={300}>
