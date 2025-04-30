@@ -78,15 +78,15 @@ The app will run at `http://localhost:3002`
 
 #### 🔐 Login Page
 
-![Login](public/screenshots/screenshot1.png)
+![Login](./screenshots/screenshot1.png)
 
 #### 🔐 Register
 
-![Upload](public/screenshots/screenshot2.png)
+![Upload](./screenshots/screenshot2.png)
 
 #### 📤 Upload Invoice
 
-![Table](public/screenshots/screenshot3.png)
+![Table](./screenshots/screenshot3.png)
 
 #### 📋 Expenses Table
 
@@ -94,11 +94,11 @@ The app will run at `http://localhost:3002`
 
 #### 🔍 Search and Filter
 
-![Search](public/screenshots/screenshot5.png)
+![Search](./screenshots/screenshot5.png)
 
 #### 📊 Expense Charts
 
-![Edit](public/screenshots/screenshot6.png)
+![Edit](./screenshots/screenshot6.png)
 
 ---
 
