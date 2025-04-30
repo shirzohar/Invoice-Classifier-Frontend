@@ -90,7 +90,7 @@ The app will run at `http://localhost:3002`
 
 #### 📋 Expenses Table
 
-![Charts](public/screenshots/screenshot4.png)
+![Charts](./screenshots/screenshot4.png)
 
 #### 🔍 Search and Filter
 
