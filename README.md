@@ -74,6 +74,34 @@ The app will run at `http://localhost:3002`
 
 ---
 
+### 🖼️ Screenshots
+
+#### 🔐 Login Page
+
+![Login](public/screenshots/screenshot1.png)
+
+#### 🔐 Register
+
+![Upload](public/screenshots/screenshot2.png)
+
+#### 📤 Upload Invoice
+
+![Table](public/screenshots/screenshot3.png)
+
+#### 📋 Expenses Table
+
+![Charts](public/screenshots/screenshot4.png)
+
+#### 🔍 Search and Filter
+
+![Search](public/screenshots/screenshot5.png)
+
+#### 📊 Expense Charts
+
+![Edit](public/screenshots/screenshot6.png)
+
+---
+
 ### 📬 Author
 
 **Shir Zohar** – [GitHub](https://github.com/shirzohar)
