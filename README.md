@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+## 💻 BusyMatch Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Frontend for the BusyMatch project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the BusyMatch backend API and supports user authentication, expense categorization, and data visualization.
 
-## Available Scripts
+### 🚀 Key Features
 
-In the project directory, you can run:
+- 📤 Upload invoices (PDF/images) and extract data via OCR
+- 📊 Display categorized expenses in tables and graphs
+- 🔐 User login and registration with JWT-based authentication
+- 🎯 Responsive UI with Tailwind CSS
+- 🔍 Filter, search, and edit expenses
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🛠️ Technologies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React (TypeScript)
+- Tailwind CSS
+- Recharts (for charts)
+- Axios (for HTTP requests)
+- React Router
+- JWT stored in LocalStorage
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ▶️ Running Locally
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/shirzohar/busymatch-frontend.git
+cd busymatch-frontend
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. **Set environment variables:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Create a `.env` file in the root with:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```env
+REACT_APP_API_BASE_URL=http://localhost:5000/api
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. **Run the app:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+The app will run at `http://localhost:3002`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📂 Project Structure
+
+```plaintext
+├── src/
+│   ├── components/       # Reusable components (forms, tables, charts)
+│   ├── pages/            # Main screens (Login, Dashboard, Upload, etc.)
+│   ├── services/         # Axios API services
+│   ├── utils/            # Helper functions
+│   ├── App.tsx           # Main app routing
+│   └── index.tsx         # Entry point
+├── public/
+├── .env
+├── tailwind.config.js
+├── tsconfig.json
+```
+
+---
+
+### 📬 Author
+
+**Shir Zohar** – [GitHub](https://github.com/shirzohar)
