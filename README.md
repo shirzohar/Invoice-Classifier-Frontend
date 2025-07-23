@@ -1,18 +1,17 @@
-💻 Invoice Classifier Frontend
+Invoice Classifier Frontend
 Frontend for the Invoice Classifier project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the Invoice Classifier backend API and supports user authentication, expense categorization, and data visualization.
 
-🚀 Key Features
-📤 Upload invoices (PDF/images) and extract data via OCR
+Key Features
+Upload invoices (PDF/images) and extract data via OCR
+Display categorized expenses in tables and graphs
 
-📊 Display categorized expenses in tables and graphs
+User login and registration with JWT-based authentication
 
-🔐 User login and registration with JWT-based authentication
+Responsive UI with Tailwind CSS
 
-🎯 Responsive UI with Tailwind CSS
+Filter, search, and edit expenses
 
-🔍 Filter, search, and edit expenses
-
-🛠️ Technologies
+Technologies
 React (TypeScript)
 
 Tailwind CSS
@@ -25,7 +24,7 @@ React Router
 
 JWT stored in LocalStorage
 
-▶️ Running Locally
+Running Locally
 Clone the repository:
 
 bash
