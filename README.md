@@ -1,64 +1,64 @@
-## 💻 BusyMatch Frontend
+💻 Invoice Classifier Frontend
+Frontend for the Invoice Classifier project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the Invoice Classifier backend API and supports user authentication, expense categorization, and data visualization.
 
-Frontend for the BusyMatch project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the BusyMatch backend API and supports user authentication, expense categorization, and data visualization.
+🚀 Key Features
+📤 Upload invoices (PDF/images) and extract data via OCR
 
-### 🚀 Key Features
+📊 Display categorized expenses in tables and graphs
 
-- 📤 Upload invoices (PDF/images) and extract data via OCR
-- 📊 Display categorized expenses in tables and graphs
-- 🔐 User login and registration with JWT-based authentication
-- 🎯 Responsive UI with Tailwind CSS
-- 🔍 Filter, search, and edit expenses
+🔐 User login and registration with JWT-based authentication
 
----
+🎯 Responsive UI with Tailwind CSS
 
-### 🛠️ Technologies
+🔍 Filter, search, and edit expenses
 
-- React (TypeScript)
-- Tailwind CSS
-- Recharts (for charts)
-- Axios (for HTTP requests)
-- React Router
-- JWT stored in LocalStorage
+🛠️ Technologies
+React (TypeScript)
 
----
+Tailwind CSS
 
-### ▶️ Running Locally
+Recharts (for charts)
 
-1. **Clone the repository:**
+Axios (for HTTP requests)
 
-```bash
-git clone https://github.com/shirzohar/busymatch-frontend.git
-cd busymatch-frontend
-```
+React Router
 
-2. **Install dependencies:**
+JWT stored in LocalStorage
 
-```bash
+▶️ Running Locally
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/shirzohar/invoice-classifier-frontend.git
+cd invoice-classifier-frontend
+Install dependencies:
+
+bash
+Copy
+Edit
 npm install
-```
+Set environment variables:
 
-3. **Set environment variables:**
+Create a .env file in the root with:
 
-Create a `.env` file in the root with:
-
-```env
+env
+Copy
+Edit
 REACT_APP_API_BASE_URL=http://localhost:5000/api
-```
+Run the app:
 
-4. **Run the app:**
-
-```bash
+bash
+Copy
+Edit
 npm start
-```
+The app will run at http://localhost:3002
 
-The app will run at `http://localhost:3002`
-
----
-
-### 📂 Project Structure
-
-```plaintext
+📂 Project Structure
+plaintext
+Copy
+Edit
 ├── src/
 │   ├── components/       # Reusable components (forms, tables, charts)
 │   ├── pages/            # Main screens (Login, Dashboard, Upload, etc.)
@@ -70,38 +70,3 @@ The app will run at `http://localhost:3002`
 ├── .env
 ├── tailwind.config.js
 ├── tsconfig.json
-```
-
----
-
-### 🖼️ Screenshots
-
-#### 🔐 Login Page
-
-![Login](./screenshots/screenshot1.png)
-
-#### 🔐 Register
-
-![Upload](./screenshots/screenshot2.png)
-
-#### 📤 Upload Invoice
-
-![Table](./screenshots/screenshot3.png)
-
-#### 📋 Expenses Table
-
-![Charts](./screenshots/screenshot4.png)
-
-#### 🔍 Search and Filter
-
-![Search](./screenshots/screenshot5.png)
-
-#### 📊 Expense Charts
-
-![Edit](./screenshots/screenshot6.png)
-
----
-
-### 📬 Author
-
-**Shir Zohar** – [GitHub](https://github.com/shirzohar)
