@@ -55,18 +55,4 @@ Edit
 npm start
 The app will run at http://localhost:3002
 
-📂 Project Structure
-plaintext
-Copy
-Edit
-├── src/
-│   ├── components/       # Reusable components (forms, tables, charts)
-│   ├── pages/            # Main screens (Login, Dashboard, Upload, etc.)
-│   ├── services/         # Axios API services
-│   ├── utils/            # Helper functions
-│   ├── App.tsx           # Main app routing
-│   └── index.tsx         # Entry point
-├── public/
-├── .env
-├── tailwind.config.js
-├── tsconfig.json
+
