@@ -1,57 +1,107 @@
-Invoice Classifier Frontend
-Frontend for the Invoice Classifier project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the Invoice Classifier backend API and supports user authentication, expense categorization, and data visualization.
+## 💻 BusyMatch Frontend
 
-Key Features
-Upload invoices (PDF/images) and extract data via OCR
-Display categorized expenses in tables and graphs
+Frontend for the BusyMatch project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the BusyMatch backend API and supports user authentication, expense categorization, and data visualization.
 
-User login and registration with JWT-based authentication
+### 🚀 Key Features
 
-Responsive UI with Tailwind CSS
+- 📤 Upload invoices (PDF/images) and extract data via OCR
+- 📊 Display categorized expenses in tables and graphs
+- 🔐 User login and registration with JWT-based authentication
+- 🎯 Responsive UI with Tailwind CSS
+- 🔍 Filter, search, and edit expenses
 
-Filter, search, and edit expenses
+---
 
-Technologies
-React (TypeScript)
+### 🛠️ Technologies
 
-Tailwind CSS
+- React (TypeScript)
+- Tailwind CSS
+- Recharts (for charts)
+- Axios (for HTTP requests)
+- React Router
+- JWT stored in LocalStorage
 
-Recharts (for charts)
+---
 
-Axios (for HTTP requests)
+### ▶️ Running Locally
 
-React Router
+1. **Clone the repository:**
 
-JWT stored in LocalStorage
+```bash
+git clone https://github.com/shirzohar/busymatch-frontend.git
+cd busymatch-frontend
+```
 
-Running Locally
-Clone the repository:
+2. **Install dependencies:**
 
-bash
-Copy
-Edit
-git clone https://github.com/shirzohar/invoice-classifier-frontend.git
-cd invoice-classifier-frontend
-Install dependencies:
-
-bash
-Copy
-Edit
+```bash
 npm install
-Set environment variables:
+```
 
-Create a .env file in the root with:
+3. **Set environment variables:**
 
-env
-Copy
-Edit
+Create a `.env` file in the root with:
+
+```env
 REACT_APP_API_BASE_URL=http://localhost:5000/api
-Run the app:
+```
 
-bash
-Copy
-Edit
+4. **Run the app:**
+
+```bash
 npm start
-The app will run at http://localhost:3002
+```
 
+The app will run at `http://localhost:3002`
 
+---
+
+### 📂 Project Structure
+
+```plaintext
+├── src/
+│   ├── components/       # Reusable components (forms, tables, charts)
+│   ├── pages/            # Main screens (Login, Dashboard, Upload, etc.)
+│   ├── services/         # Axios API services
+│   ├── utils/            # Helper functions
+│   ├── App.tsx           # Main app routing
+│   └── index.tsx         # Entry point
+├── public/
+├── .env
+├── tailwind.config.js
+├── tsconfig.json
+```
+
+---
+
+### 🖼️ Screenshots
+
+#### 🔐 Login Page
+
+![Login](public/screenshots/screenshot1.png)
+
+#### 🔐 Register
+
+![Upload](public/screenshots/screenshot2.png)
+
+#### 📤 Upload Invoice
+
+![Table](public/screenshots/screenshot3.png)
+
+#### 📋 Expenses Table
+
+![Charts](public/screenshots/screenshot4.png)
+
+#### 🔍 Search and Filter
+
+![Search](public/screenshots/screenshot5.png)
+
+#### 📊 Expense Charts
+
+![Edit](public/screenshots/screenshot6.png)
+
+---
+
+### 📬 Author
+
+**Shir Zohar** – [GitHub](https://github.com/shirzohar)
