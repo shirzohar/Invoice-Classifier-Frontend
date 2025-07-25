@@ -1,4 +1,4 @@
-## 💻 BusyMatch Frontend
+## 💻 Invoice-Classifier-Frontend
 
 Frontend for the BusyMatch project – a responsive React web app for tracking expenses and uploading invoices with OCR. The app connects to the BusyMatch backend API and supports user authentication, expense categorization, and data visualization.
 
@@ -78,27 +78,27 @@ The app will run at `http://localhost:3002`
 
 #### 🔐 Login Page
 
-![Login](public/screenshots/screenshot1.png)
+![Login](screenshots/screenshot1.png)
 
 #### 🔐 Register
 
-![Upload](public/screenshots/screenshot2.png)
+![Upload](screenshots/screenshot2.png)
 
 #### 📤 Upload Invoice
 
-![Table](public/screenshots/screenshot3.png)
+![Table](screenshots/screenshot3.png)
 
 #### 📋 Expenses Table
 
-![Charts](public/screenshots/screenshot4.png)
+![Charts](screenshots/screenshot4.png)
 
 #### 🔍 Search and Filter
 
-![Search](public/screenshots/screenshot5.png)
+![Search](screenshots/screenshot5.png)
 
 #### 📊 Expense Charts
 
-![Edit](public/screenshots/screenshot6.png)
+![Edit](screenshots/screenshot6.png)
 
 ---
 
